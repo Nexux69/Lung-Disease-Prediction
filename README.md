@@ -3,7 +3,7 @@
 ## Description
 
 This project predicts lung diseases—**COVID-19, Normal, Pneumonia, and Tuberculosis**—using advanced AI/ML techniques. The core model is trained on a curated Kaggle dataset of chest X-ray images. The objective is to provide a demo web application where users can upload X-ray images and receive disease predictions in real time.  
-The entire pipeline, from model development to deployment, is fully self-implemented by me (**Faiz Shaikh**) with no external licenses or proprietary code.
+
 
 ---
 
