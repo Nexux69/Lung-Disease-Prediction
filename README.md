@@ -54,7 +54,10 @@ This project predicts lung diseases—**COVID-19, Normal, Pneumonia, and Tubercu
 ## Screenshots
 
 ```markdown
-![App Screenshot](screenshot.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/007125ca-1ed5-49b1-8d69-64934599ed1d" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9dcc2845-1ad9-4cb4-a6cd-25be707e0bc4" />
+
 ```
 
 ---
