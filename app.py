@@ -95,7 +95,7 @@ def show_prediction(disease, confidence, is_disease=True):
 # ------------------------------
 # Set Background
 # ------------------------------
-set_background("assets/background.png")
+set_background("assests/background.png")
 
 
 # ------------------------------
@@ -134,4 +134,5 @@ with st.container():
                 show_prediction("NON-DISEASE (Normal)", confidence, is_disease=False)
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
