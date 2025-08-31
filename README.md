@@ -105,10 +105,3 @@ The entire pipeline, from model development to deployment, is fully self-impleme
 - Add explainability (Grad-CAM, saliency maps) for AI predictions.
 
 ---
-
-## Contributing
-
-> Currently, external contributions are not being accepted.  
-> For feedback or suggestions, please open an issue.
-
----
