@@ -134,3 +134,4 @@ with st.container():
                 show_prediction("NON-DISEASE (Normal)", confidence, is_disease=False)
 
     st.markdown('</div>', unsafe_allow_html=True)
+
