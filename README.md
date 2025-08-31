@@ -1,70 +1,98 @@
-# Lung Disease Prediction
+# Lung Disease Prediction using Machine Learning and Streamlit
 
-This project is aimed at predicting lung diseases using deep learning and X-ray images. The repository contains the code and model necessary to classify X-ray images for potential lung disease, making use of a trained neural network model.
+## Description
 
-## Features
+This project predicts lung diseases using Artificial Intelligence and Machine Learning models. Built as an educational and demo tool, it demonstrates the use of ML techniques to aid healthcare predictions. The entire project is fully implemented by me (Faiz Shaikh) with no external licenses or dependencies beyond open-source libraries.
 
-- **Jupyter Notebook (`X_rays.ipynb`)**: Contains data exploration, preprocessing, model training, and evaluation steps.
-- **Flask App (`app.py`)**: A web application that allows users to upload X-ray images and receive predictions from the trained model.
-- **Pre-trained Model (`model.h5`)**: The saved neural network model used for inference.
-- **Requirements (`requirements.txt`)**: List of Python dependencies needed to run the code and app.
-- **Assets Folder (`assests/`)**: Contains additional resources or files needed by the app (e.g., images, web assets).
+---
 
-## Getting Started
+## Key Features
 
-### Prerequisites
+- **Developed using Google Colab** for model training and experimentation.
+- **Machine Learning Models:** Utilizes algorithms such as Logistic Regression, Random Forest, and Neural Networks (if available).
+- **Interactive Streamlit Web App:** Enables users to input patient data and receive immediate lung disease predictions.
+- **User-Friendly Interface:** Simple, intuitive form for entering symptoms and health parameters.
 
-- Python 3.x
-- pip
+---
 
-### Installation
+## How it Works
 
-1. **Clone the repository:**
+1. **Data Preprocessing & Training:**  
+   All data cleaning, feature engineering, and machine learning model training are performed in Google Colab notebooks.
+
+2. **Integration:**  
+   The trained AI/ML model is exported and integrated into a Streamlit web application.
+
+3. **Prediction Flow:**  
+   - User enters symptoms and health data via the app.
+   - The backend ML model processes the input.
+   - The app returns a prediction about possible lung disease.
+
+---
+
+## Deployment
+
+- The application is **hosted on Streamlit Cloud** for easy access and sharing.
+- **Live Demo:**  
+  [Lung Disease Prediction App](https://lung-disease-prediction-faiz-shaikh.streamlit.app/)
+
+---
+
+## Screenshots
+
+![App Screenshot](screenshot.png)
+
+---
+
+## Tech Stack
+
+- **Programming Language:** Python  
+- **Machine Learning Libraries:** Scikit-learn / TensorFlow / Keras (choose based on your implementation)
+- **Data Analysis & Visualization:** Pandas, NumPy, Matplotlib
+- **Web Deployment:** Streamlit
+- **Model Training Environment:** Google Colab
+
+---
+
+## Installation & Usage
+
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/Nexux69/Lung-Disease-Prediction.git
    cd Lung-Disease-Prediction
    ```
 
-2. **Install the required dependencies:**
+2. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-### Usage
-
-#### Running the Notebook
-
-Open and run `X_rays.ipynb` in Jupyter Notebook to see the data analysis, model training, and evaluation process.
-
-#### Running the Web App
-
-1. Ensure the `model.h5` file is present in the root directory.
-2. Start the Flask application:
+3. **Run the Streamlit App**
    ```bash
-   python app.py
+   streamlit run app.py
    ```
-3. Open your browser and go to `http://127.0.0.1:5000` to access the web app and upload X-ray images for prediction.
-
-## Project Structure
-
-```
-.
-├── X_rays.ipynb         # Data analysis, training, evaluation
-├── app.py               # Flask web app
-├── assests/             # Assets/resources for the app
-├── model.h5             # Trained deep learning model
-└── requirements.txt     # Python dependencies
-```
-
-## Notes
-
-- Make sure all dependencies are installed before running the app or notebook.
-- The model was trained on a set of X-ray images. For best results, use similar image formats when making predictions.
-
-## License
-
-This project does not currently specify a license.
+   The app will be available at `http://localhost:8501` by default.
 
 ---
 
-**Author:** [Nexux69](https://github.com/Nexux69)
+## Acknowledgement
+
+- This project is completely self-made by **Faiz Shaikh**.
+- No external licenses or proprietary tools have been used.
+
+---
+
+## Future Scope
+
+- Explore advanced deep learning models for improved accuracy.
+- Enhance the user interface and add more visualizations.
+- Implement more robust data validation and feedback mechanisms.
+
+---
+
+## Contributing
+
+> Currently, no external contributions are being accepted.  
+> For suggestions or feedback, feel free to open an issue.
+
+---
