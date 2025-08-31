@@ -1,4 +1,4 @@
-# Lung Disease Prediction using Machine Learning and Streamlit
+# Lung Disease Prediction 
 
 ## Description
 
