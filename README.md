@@ -1,98 +1,114 @@
-# Lung Disease Prediction 
+# Lung Disease Prediction using Deep Learning (DenseNet121 + Streamlit)
 
 ## Description
 
-This project predicts lung diseases using Artificial Intelligence and Machine Learning models. Built as an educational and demo tool, it demonstrates the use of ML techniques to aid healthcare predictions. The entire project is fully implemented by me (Faiz Shaikh) with no external licenses or dependencies beyond open-source libraries.
+This project predicts lung diseases—**COVID-19, Normal, Pneumonia, and Tuberculosis**—using advanced AI/ML techniques. The core model is trained on a curated Kaggle dataset of chest X-ray images. The objective is to provide a demo web application where users can upload X-ray images and receive disease predictions in real time.  
+The entire pipeline, from model development to deployment, is fully self-implemented by me (**Faiz Shaikh**) with no external licenses or proprietary code.
 
 ---
 
 ## Key Features
 
-- **Developed using Google Colab** for model training and experimentation.
-- **Machine Learning Models:** Utilizes algorithms such as Logistic Regression, Random Forest, and Neural Networks (if available).
-- **Interactive Streamlit Web App:** Enables users to input patient data and receive immediate lung disease predictions.
-- **User-Friendly Interface:** Simple, intuitive form for entering symptoms and health parameters.
+- **Dataset Source:** Kaggle chest X-ray dataset covering COVID-19, Pneumonia, Tuberculosis, and Normal cases.
+- **Preprocessing:** Utilizes Keras `ImageDataGenerator` for robust image augmentation and normalization.
+- **Transfer Learning:** Leverages **DenseNet121** pretrained on ImageNet for high accuracy and efficient feature extraction.
+- **Custom Classifier:** Fine-tuned dense layers tailored for 4-class disease classification.
+- **Training Environment:** Complete model development and training in Google Colab for scalability and reproducibility.
+- **Model Artifact:** Trained model exported as `.h5` file for easy integration and deployment.
+- **Evaluation Metrics:** Assessed via accuracy, loss curves, confusion matrix, and detailed classification report.
+- **Deployment:** Interactive web app served via **Streamlit Cloud** for user-friendly, real-time inference.
 
 ---
 
-## How it Works
+## How it Works (Step by Step)
 
-1. **Data Preprocessing & Training:**  
-   All data cleaning, feature engineering, and machine learning model training are performed in Google Colab notebooks.
+1. **Data Acquisition & Preparation**
+   - Download chest X-ray dataset directly from Kaggle in Google Colab.
+   - Split dataset into **training**, **validation**, and **test** subsets.
 
-2. **Integration:**  
-   The trained AI/ML model is exported and integrated into a Streamlit web application.
+2. **Model Architecture**
+   - Build model using **DenseNet121** with frozen convolutional base (transfer learning).
+   - Add custom dense layers for final multi-class classification.
 
-3. **Prediction Flow:**  
-   - User enters symptoms and health data via the app.
-   - The backend ML model processes the input.
-   - The app returns a prediction about possible lung disease.
+3. **Training**
+   - Use `AdamW` optimizer for robust convergence.
+   - Apply `EarlyStopping` callback to avoid overfitting.
+   - Monitor validation accuracy and loss.
+
+4. **Evaluation**
+   - Achieve approximately **89% accuracy** on the test set.
+   - Analyze performance with confusion matrix and classification report.
+
+5. **Prediction & Deployment**
+   - Test the trained model on unseen chest X-ray images.
+   - Deploy the model as a Streamlit web application for instant predictions.
 
 ---
 
-## Deployment
+## Demo Link
 
-- The application is **hosted on Streamlit Cloud** for easy access and sharing.
-- **Live Demo:**  
-  [Lung Disease Prediction App](https://lung-disease-prediction-faiz-shaikh.streamlit.app/)
+[Click here to try the Lung Disease Prediction App](https://lung-disease-prediction-faiz-shaikh.streamlit.app/)
 
 ---
 
 ## Screenshots
 
+```markdown
 ![App Screenshot](screenshot.png)
+```
 
 ---
 
 ## Tech Stack
 
-- **Programming Language:** Python  
-- **Machine Learning Libraries:** Scikit-learn / TensorFlow / Keras (choose based on your implementation)
-- **Data Analysis & Visualization:** Pandas, NumPy, Matplotlib
-- **Web Deployment:** Streamlit
-- **Model Training Environment:** Google Colab
+- **Python 3**
+- **TensorFlow** / **Keras** (DenseNet121, ImageDataGenerator)
+- **Pandas**, **NumPy**, **Matplotlib** (data manipulation & visualization)
+- **Streamlit** (web UI & deployment)
+- **Google Colab** (model training environment)
 
 ---
 
 ## Installation & Usage
 
-1. **Clone the Repository**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Nexux69/Lung-Disease-Prediction.git
    cd Lung-Disease-Prediction
    ```
 
-2. **Install Dependencies**
+2. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the Streamlit App**
+3. **Run the Streamlit app locally**
    ```bash
    streamlit run app.py
    ```
-   The app will be available at `http://localhost:8501` by default.
+   The app launches at `http://localhost:8501/`.
 
 ---
 
 ## Acknowledgement
 
-- This project is completely self-made by **Faiz Shaikh**.
-- No external licenses or proprietary tools have been used.
+- This project is **100% self-implemented** by **Faiz Shaikh**.
+- No external license or proprietary code is used.
 
 ---
 
 ## Future Scope
 
-- Explore advanced deep learning models for improved accuracy.
-- Enhance the user interface and add more visualizations.
-- Implement more robust data validation and feedback mechanisms.
+- Integrate more advanced deep learning models (e.g., EfficientNet, Vision Transformers).
+- Expand dataset for improved generalization and accuracy.
+- Enhance UI/UX with richer visual feedback and patient history support.
+- Add explainability (Grad-CAM, saliency maps) for AI predictions.
 
 ---
 
 ## Contributing
 
-> Currently, no external contributions are being accepted.  
-> For suggestions or feedback, feel free to open an issue.
+> Currently, external contributions are not being accepted.  
+> For feedback or suggestions, please open an issue.
 
 ---
